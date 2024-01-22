@@ -111,7 +111,7 @@ router.delete("/todos/:todoId", async (req, res) => {
       .json({ errorMessage: "존재하지 않는 todo 데이터입니다." });
   }
 
-  // 조회된 '해야할 일'을 삭제합니다.
+  //// 조회된 '해야할 일'을 삭제합니다.
   await Todo.deleteOne({ _id: todoId }).exec();
 
   return res.status(200).json({});
